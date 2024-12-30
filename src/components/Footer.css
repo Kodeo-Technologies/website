@@ -1,0 +1,20 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-section {
+    padding-top: 2rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.svg-icons {
+    display: flex;
+    gap: 0.50rem;
+}

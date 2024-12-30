@@ -1,0 +1,395 @@
+.industries-heading {
+    font-size: 3rem;
+}
+
+.industries-wrapper {
+    height: 100vh;
+}
+
+.industries-subhead {
+    font-weight: 700;
+}
+
+.heading-container {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    justify-content: center;
+
+
+}
+
+.industries-para {
+    font-size: 19px;
+}
+
+.grid-row {
+    gap: 3rem;
+    padding: 0.75rem;
+}
+
+/* Ensures the image scales to fit the screen */
+.responsive-image {
+    width: 100%;
+    /* Make the image fill the container's width */
+    height: 600px;
+    /* Maintain the aspect ratio */
+    object-fit: cover;
+    /* Ensures the image covers the area without stretching */
+}
+
+.sectors-section {
+    padding: 3rem;
+}
+
+.sectors {
+    text-transform: uppercase;
+    font-size: 3rem;
+    padding-top: 2rem;
+    display: flex;
+    text-align: center;
+    padding-bottom: 3rem;
+    justify-content: center;
+}
+
+.learn-more{
+    font-size: 17px;
+    text-decoration: underline;
+    margin-top: 2rem;
+    font-weight: 800;
+    text-underline-offset: 6px; /* Adjust the value to control the space */
+}
+
+.sectors-row {
+    gap: 3rem;
+}
+
+.sector-image {
+    width: 100%;
+    /* Make the image fill the container's width */
+    height: 300px;
+    /* Maintain the aspect ratio */
+    object-fit: cover;
+    /* Ensures the image covers the area without stretching */
+}
+
+.sectors-subhead {
+    font-weight: 700;
+    margin-top: 0.80rem;
+}
+
+.contact-section {
+    background-color: #211B44;
+    padding: 5rem;
+}
+
+.contact {
+    text-transform: uppercase;
+    font-size: 3rem;
+    color: #fff;
+}
+
+.locations {
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+
+.location-subheading {
+    font-size: 20px;
+}
+
+.location-section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    background-color: #F7F4F2;
+}
+
+/* .countries-container{
+    padding-top: 2rem;
+    font-weight: 700;
+    font-size: 18px;
+} */
+
+.countries-container {
+    width: 100%;
+    padding: 1rem;
+    font-size: 19px;
+
+}
+
+.countries-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    padding-right: 20rem;
+    /* Adds extra space on the right */
+
+    text-align: center;
+}
+
+.countries-grid div {
+    padding: 0.8rem;
+    background: #D9D9D9;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+}
+
+.work-image {
+    width: 100%;
+    /* Make the image fill the container's width */
+    height: 300px;
+    /* Maintain the aspect ratio */
+    object-fit: cover;
+    /* Ensures the image covers the area without stretching */
+}
+
+
+.testimonials-container {
+    width: 100%;
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+
+}
+
+.testimonials-heading {
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    /* Spacing between cards */
+}
+
+.testimonial-card {
+    background: #fafafa;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 400px;
+    /* Longer height for feedback */
+    text-align: left;
+}
+
+.testimonial-feedback {
+    font-size: 1.3rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.testimonial-profile {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+    /* Push profile to the bottom */
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1rem;
+    border: 2px solid #ddd;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-name {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.profile-designation {
+    font-size: 0.9rem;
+    color: #777;
+    margin: 0;
+}
+
+.clients-section {
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    background-color: #F7F4F2;
+
+}
+
+.client-para {
+    font-size: 18px;
+    margin-top: 1rem;
+}
+
+.clients-heading {
+    text-align: center;
+    font-size: 3rem;
+    padding-top: 2rem;
+    margin-bottom: 2.5rem;
+
+}
+
+.clients-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 columns in each row */
+    gap: 3rem;
+    /* Spacing between cards */
+    padding-left: 10rem;
+    padding-right: 10rem;
+
+}
+
+.client-card {
+    background-color: #fff;
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    min-height: 350px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .clients-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns for smaller screens */
+    }
+}
+
+.services-section-full {
+    background-color: #F7F4F2;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.service-section {
+    max-width: 1550px;
+    margin: 0 auto;
+
+}
+
+.main-heading {
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 1.2;
+    color: #232366;
+}
+
+.sub-heading {
+    font-size: 1.25rem;
+    color: #333;
+    padding-bottom: 2rem;
+}
+
+.services-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+}
+
+.service-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+.service-pill {
+    background-color: #D9D9D9;
+    border-radius: 50px;
+    padding: 12px 24px;
+    font-size: 19px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.service-pill:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .main-heading {
+        font-size: 2rem;
+    }
+
+    .sub-heading {
+        font-size: 1.1rem;
+    }
+
+    .service-pill {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+
+    .services-container {
+        gap: 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    .main-heading {
+        font-size: 1.75rem;
+    }
+
+    .service-row {
+        gap: 8px;
+    }
+
+    .service-pill {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+
+    .services-container {
+        gap: 8px;
+    }
+}
+
+
+.btn-danger {
+    background-color: #F6320B;
+    border: none;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    padding-right: 20px !important;
+    padding-left: 20px !important;
+}
+
+.case-study-section {
+    padding-top: 3.5rem;
+    padding-bottom: 5rem;
+
+}
+
+.case-studies-heading {
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.case-heading {
+    font-size: 3rem;
+}
+
