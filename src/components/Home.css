@@ -52,12 +52,13 @@
     justify-content: center;
 }
 
-.learn-more{
+.learn-more {
     font-size: 17px;
     text-decoration: underline;
     margin-top: 2rem;
     font-weight: 800;
-    text-underline-offset: 6px; /* Adjust the value to control the space */
+    text-underline-offset: 6px;
+    /* Adjust the value to control the space */
 }
 
 .sectors-row {
@@ -230,9 +231,14 @@
 
 }
 
+.clients-logos {
+    width: auto;
+    height: 30px;
+}
+
 .client-para {
     font-size: 18px;
-    margin-top: 1rem;
+
 }
 
 .clients-heading {
@@ -260,6 +266,10 @@
     text-align: center;
     font-size: 1.3rem;
     font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
     min-height: 350px;
     transition: transform 0.2s, box-shadow 0.2s;
 }
@@ -393,3 +403,47 @@
     font-size: 3rem;
 }
 
+
+/* ContactForm.css */
+
+.custom-input {
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    font-size: 1.3rem;
+    font-weight: 300;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4) !important;
+    color: white !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.custom-input::placeholder {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.custom-input:focus {
+    box-shadow: none !important;
+    border-bottom-color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.custom-checkbox .form-check-input {
+    background-color: transparent;
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.custom-checkbox .form-check-label {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.btn-danger {
+    background-color: #f03e3e;
+    border: none;
+}
+
+.form-check-input:checked {
+    background-color: #f03e3e;
+    border-color: #f03e3e;
+}

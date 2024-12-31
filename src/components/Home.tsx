@@ -6,8 +6,16 @@ import SectorThree from '../assets/sectors/SectorThree.jpg'
 import WorkOne from '../assets/work/WorkOne.jpg'
 import WorkTwo from '../assets/work/WorkTwo.jpg'
 import WorkThree from '../assets/work/WorkThree.jpg'
-
+import HSBC from '../assets/clients/HSBC.png'
 import MainImage from '../assets/main.jpg'
+import AstraZenca from '../assets/clients/astra.jpg'
+import Shell from '../assets/clients/shell.png'
+import BP from '../assets/clients/bp.png'
+import NationalGrid from '../assets/clients/NGG.png'
+import BritGov from '../assets/clients/gcs.png'
+import Rekit from '../assets/clients/rk.png'
+import BT from '../assets/clients/bt.png'
+import { useState } from 'react'
 const Home = () => {
     const serviceRows = [
         ['UI/UX Design', 'Mobile Applications Development', 'Paid Social', 'Branding', 'Design Audit'],
@@ -22,7 +30,31 @@ const Home = () => {
         { number: "300+", label: "Clients" },
         { number: "30+", label: "Global Awards" },
     ];
-
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        phone: '',
+        project: ''
+      });
+      
+      const [characterCount, setCharacterCount] = useState(0);
+      
+      const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({
+          ...prev,
+          [name]: value
+        }));
+        
+        if (name === 'project') {
+          setCharacterCount(value.length);
+        }
+      };
+      
+      const handleSubmit = (e) => {
+        e.preventDefault();
+        // Handle form submission logic here
+      };
 
     return (
         <div>
@@ -208,28 +240,37 @@ const Home = () => {
                     </div>
                     <div className="clients-grid">
                         <div className="client-card">
-                            Diia City
+                            <img src={HSBC} alt='hsbc' style={{ width: 'auto', height: '35px', }} />
+                            <h5 style={{ fontWeight: '800', marginTop: '1.5rem' }}>HSBC UK</h5>
                             <p className='client-para'>The metaverse is a virtual world where users interact with each other as avatars in a 3D space. </p>
                         </div>
-                        <div className="client-card">Ministry of Health
+                        <div className="client-card">
+                            <img src={AstraZenca} alt='astra' style={{ width: 'auto', height: '45px' }} />
+                            <h5 style={{ fontWeight: '800', marginTop: '1.5rem' }}>AstraZenca</h5>
                             <p className='client-para'>The metaverse is a virtual world where users interact with each other as avatars in a 3D space. </p>
                         </div>
-                        <div className="client-card">Diia City
+                        <div className="client-card"> <img src={Shell} alt='shell' style={{ width: 'auto', height: '60px' }} />
+                            <h5 style={{ fontWeight: '800', marginTop: '1.5rem' }}>Shell</h5>
                             <p className='client-para'>The metaverse is a virtual world where users interact with each other as avatars in a 3D space. </p>
                         </div>
-                        <div className="client-card">Ministry of Health
+                        <div className="client-card"> <img src={BP} alt='bp' style={{ width: 'auto', height: '80px' }} />
+                            <h5 style={{ fontWeight: '800', marginTop: '1.5rem' }}>British Petroleum</h5>
                             <p className='client-para'>The metaverse is a virtual world where users interact with each other as avatars in a 3D space. </p>
                         </div>
-                        <div className="client-card">Diia City
+                        <div className="client-card"> <img src={NationalGrid} alt='ngg' style={{ width: 'auto', height: '50px' }} />
+                            <h5 style={{ fontWeight: '800', marginTop: '1.5rem' }}>National Grid</h5>
                             <p className='client-para'>The metaverse is a virtual world where users interact with each other as avatars in a 3D space. </p>
                         </div>
-                        <div className="client-card">Ministry of Health
+                        <div className="client-card"> <img src={BritGov} alt='britgov' style={{ width: 'auto', height: '60px' }} />
+                            <h5 style={{ fontWeight: '800', marginTop: '1.5rem' }}>UK Government</h5>
                             <p className='client-para'>The metaverse is a virtual world where users interact with each other as avatars in a 3D space. </p>
                         </div>
-                        <div className="client-card">Diia City
+                        <div className="client-card"> <img src={Rekit} alt='rekit' style={{ width: 'auto', height: '50px' }} />
+                            <h5 style={{ fontWeight: '800', marginTop: '1.5rem' }}>Reckitt Benckiser </h5>
                             <p className='client-para'>The metaverse is a virtual world where users interact with each other as avatars in a 3D space. </p>
                         </div>
-                        <div className="client-card">Ministry of Health
+                        <div className="client-card"> <img src={BT} alt='bt' style={{ width: 'auto', height: '50px' }} />
+                            <h5 style={{ fontWeight: '800', marginTop: '1.5rem' }}>BT Group</h5>
                             <p className='client-para'>The metaverse is a virtual world where users interact with each other as avatars in a 3D space. </p>
                         </div>
                     </div>
@@ -405,12 +446,12 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            
 
 
-<section>
-    sa
-</section>
+
+            <section>
+                sa
+            </section>
 
             <section className='sectors-section'>
                 <div>
@@ -447,6 +488,96 @@ const Home = () => {
                 <div>
                     <div>
                         <h1 className='contact'>Let's make cool products <br></br> together</h1>
+                    </div>
+                    <div className="contact-form-wrapper">
+                        <div className="container py-5">
+                           
+
+                            <form onSubmit={handleSubmit}>
+                                <div className="row mb-5 g-4">
+                                    <div className="col-md-4">
+                                        <input
+                                            type="text"
+                                            className="form-control custom-input"
+                                            placeholder="Name"
+                                            name="name"
+                                            value={formData.name}
+                                            onChange={handleChange}
+                                            required
+                                        />
+                                    </div>
+                                    <div className="col-md-4">
+                                        <input
+                                            type="email"
+                                            className="form-control custom-input"
+                                            placeholder="Email"
+                                            name="email"
+                                            value={formData.email}
+                                            onChange={handleChange}
+                                            required
+                                        />
+                                    </div>
+                                    <div className="col-md-4">
+                                        <input
+                                            type="tel"
+                                            className="form-control custom-input"
+                                            placeholder="Phone Number"
+                                            name="phone"
+                                            value={formData.phone}
+                                            onChange={handleChange}
+                                            required
+                                        />
+                                    </div>
+                                </div>
+
+                                <div className="mb-5">
+                                    <textarea
+                                        className="form-control custom-input"
+                                        placeholder="Tell us about your project"
+                                        name="project"
+                                        value={formData.project}
+                                        onChange={handleChange}
+                                        rows={1}
+                                        maxLength={225}
+                                        required
+                                    />
+                                    <small className="text-muted mt-2 d-block">
+                                        {characterCount}/225
+                                    </small>
+                                </div>
+
+                                <div className="mb-4">
+                                    <div className="form-check custom-checkbox mb-3">
+                                        <input
+                                            type="checkbox"
+                                            className="form-check-input"
+                                            id="privacy"
+                                            required
+                                        />
+                                        <label className="form-check-label" htmlFor="privacy">
+                                            I agree to the processing of personal data under the terms of the Policy on the processing of personal data of Kodeo Technologies LLC
+                                        </label>
+                                    </div>
+
+                                    <div className="form-check custom-checkbox">
+                                        <input
+                                            type="checkbox"
+                                            className="form-check-input"
+                                            id="promotional"
+                                        />
+                                        <label className="form-check-label" htmlFor="promotional">
+                                            I agree to receive promotional emails from Kodeo Technologies LLC
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div className="text-end">
+                                    <button type="submit" className="btn btn-danger rounded-pill px-4">
+                                        Forward
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
 
                 </div>
