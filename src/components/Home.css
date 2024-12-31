@@ -447,3 +447,29 @@
     background-color: #f03e3e;
     border-color: #f03e3e;
 }
+
+.blogs-heading {
+    font-size: 3rem;
+}
+
+.section-companies {
+    background-color: #F7F4F2;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+
+}
+
+.deliver-para {
+    font-size: 20px;
+}
+
+.deliver-head {
+    font-size: 3rem;
+    text-transform: uppercase;
+    padding-bottom: 1rem;
+}
+
+.deliver-c {
+    max-width: 1800px;
+}

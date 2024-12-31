@@ -35,26 +35,65 @@ const Home = () => {
         email: '',
         phone: '',
         project: ''
-      });
-      
-      const [characterCount, setCharacterCount] = useState(0);
-      
-      const handleChange = (e) => {
+    });
+
+    const [characterCount, setCharacterCount] = useState(0);
+
+    const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData(prev => ({
-          ...prev,
-          [name]: value
+            ...prev,
+            [name]: value
         }));
-        
+
         if (name === 'project') {
-          setCharacterCount(value.length);
+            setCharacterCount(value.length);
         }
-      };
-      
-      const handleSubmit = (e) => {
+    };
+
+    const handleSubmit = (e) => {
         e.preventDefault();
         // Handle form submission logic here
-      };
+    };
+
+    const blogs = [
+        {
+            id: 1,
+            title: "Understanding the Accessibility of Metaverse Needs",
+            description: "Exploring virtual world interactions and user experiences in 3D space, focusing on accessibility requirements and design considerations.",
+            image: "src/assets/articles/mv.png",
+            date: "December 26, 2024"
+        },
+        {
+            id: 2,
+            title: "Modern Vs Unmodern Usability Testing of Designs",
+            description: "Comparing traditional and contemporary approaches to usability testing in virtual environments and digital spaces.",
+            image: "src/assets/articles/mv.png",
+            date: "December 25, 2024"
+        }
+    ];
+
+    const smallerBlogs = [
+        {
+            id: 3,
+            title: "Modern Vs Unmodern Usability Testing of Designs",
+            description: "Exploring interaction patterns in virtual environments",
+            image: "src/assets/articles/mv.png",
+        },
+        {
+            id: 4,
+            title: "Modern Vs Unmodern Usability Testing of Designs",
+            description: "Analyzing user behavior in 3D spaces",
+            image: "src/assets/articles/mv.png",
+        },
+        {
+            id: 5,
+            title: "Modern Vs Unmodern Usability Testing of Designs",
+            description: "Evaluating virtual world accessibility features",
+            image: "src/assets/articles/mv.png",
+        }
+    ];
+
 
     return (
         <div>
@@ -450,8 +489,72 @@ const Home = () => {
 
 
             <section>
-                sa
+                <div className="container my-5">
+                    <div className="row">
+                        <div className="col-md-4">
+                            <h1 className="blogs-heading">Must Read Articles</h1>
+                            <button className="btn btn-danger   rounded-pill mt-3">View Blogs</button>
+                        </div>
+
+                        <div className="col-md-8">
+                            {/* Featured articles */}
+                            {blogs.map(blog => (
+                                <div key={blog.id} className="card mb-4 border-0">
+                                    <div className="row g-0">
+                                        <div className="col-md-4">
+                                            <img
+                                                src={blog.image}
+                                                className="img-fluid "
+                                                alt={blog.title}
+                                                style={{ height: '200px', objectFit: 'cover', width: '100%' }}
+                                            />
+                                        </div>
+                                        <div className="col-md-8">
+                                            <div className="card-body">
+                                                <h5 className="card-title">{blog.title}</h5>
+                                                <p className="card-text">{blog.description}</p>
+                                                <p className="card-text">
+                                                    <small className="text-muted">Posted on {blog.date}</small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+
+                            {/* Bottom row articles */}
+                            <div className="row">
+                                {smallerBlogs.map(blog => (
+                                    <div key={blog.id} className="col-md-4 mb-4">
+                                        <div className="card border-0 h-100">
+                                            <img
+                                                src={blog.image}
+
+                                                alt={blog.title}
+                                                style={{ height: '200px', objectFit: 'cover' }}
+                                            />
+                                            <div className="card-body">
+                                                <h5 className="card-title">{blog.title}</h5>
+                                                <p className="card-text">{blog.description}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
+
+            <section className='section-companies'>
+                <div className='container deliver-c'>
+                    <h1 className='deliver-head'>
+                        Tailored to deliver the best<br></br> for your business
+                    </h1>
+                    <p className='deliver-para'>A flexible and adaptive process that helps<br></br> businesses launch and scale quickly.</p>
+                </div>
+            </section>
+
 
             <section className='sectors-section'>
                 <div>
@@ -491,7 +594,7 @@ const Home = () => {
                     </div>
                     <div className="contact-form-wrapper">
                         <div className="container py-5">
-                           
+
 
                             <form onSubmit={handleSubmit}>
                                 <div className="row mb-5 g-4">
