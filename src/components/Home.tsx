@@ -39,7 +39,7 @@ const Home = () => {
 
     const [characterCount, setCharacterCount] = useState(0);
 
-    const handleChange = (e) => {
+    const handleChange = (e: { target: { name: any; value: any } }) => {
         const { name, value } = e.target;
         setFormData(prev => ({
             ...prev,
@@ -51,7 +51,7 @@ const Home = () => {
         }
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: { preventDefault: () => void }) => {
         e.preventDefault();
         // Handle form submission logic here
     };
