@@ -1,30 +1,146 @@
-.industries-heading {
-    font-size: 3rem;
+/* Industries section responsive styles */
+.industries-color {
+  width: 100%;
 }
 
 .industries-wrapper {
-    height: 100vh;
-}
-
-.industries-subhead {
-    font-weight: 700;
+  height: auto;
+  min-height: 100vh;
+  display: flex;
 }
 
 .heading-container {
-    display: flex;
-    flex-direction: column;
-    padding: 3rem;
-    justify-content: center;
+  flex: 1 1 50%;
+  background-color: #F7F4F2;
+  padding: 4rem;
+}
 
+.grid-container {
+  flex: 1 1 50%;
+  background-color: white;
+  padding: 4rem;
+}
 
+.industries-heading {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 2rem;
 }
 
 .industries-para {
-    font-size: 19px;
+  font-size: 1.25rem;
+  line-height: 1.6;
 }
 
 .grid-row {
-    gap: 3rem;
+  margin-bottom: 2rem;
+}
+
+.industries-subhead {
+  margin-bottom: 1rem;
+}
+
+/* Tablet Responsive */
+@media (max-width: 1024px) {
+  .industries-wrapper {
+      min-height: auto;
+  }
+
+  .heading-container,
+  .grid-container {
+      padding: 3rem;
+  }
+
+  .industries-heading {
+      font-size: 2.5rem;
+  }
+
+  .industries-para {
+      font-size: 1.1rem;
+  }
+
+  .grid-row {
+      margin-bottom: 1.5rem;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .industries-wrapper {
+      flex-direction: column; /* Stack heading and grid containers */
+  }
+
+  .heading-container {
+      order: 1; /* Ensure heading container comes first */
+      flex: 1 1 auto; /* Adjust flex growth/shrink if needed */
+      padding: 2rem;
+  }
+
+  .grid-container {
+      order: 2; /* Ensure grid container comes after heading */
+      flex: 1 1 auto; /* Adjust flex growth/shrink if needed */
+      padding: 2rem;
+  }
+
+  .industries-heading {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+  }
+
+  .industries-para {
+      font-size: 1rem;
+      br {
+          display: none; /* Remove line breaks on mobile */
+      }
+  }
+
+  .grid-row {
+      margin-bottom: 1.5rem;
+  }
+
+  .grid-col {
+      margin-bottom: 1.5rem;
+  }
+
+  .industries-subhead {
+      margin-bottom: 0.75rem;
+      font-size: 1.1rem;
+  }
+}
+
+
+/* Small Mobile Responsive */
+@media (max-width: 480px) {
+  .heading-container,
+  .grid-container {
+      padding: 1.5rem;
+  }
+
+  .industries-heading {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+  }
+
+  .industries-para {
+      font-size: 0.9rem;
+  }
+
+  .grid-row {
+      margin-bottom: 1rem;
+  }
+
+  .grid-col {
+      margin-bottom: 1rem;
+  }
+
+  .industries-subhead {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+  }
+}
+
+.grid-row {
+    gap: 0rem;
     padding: 0.75rem;
 }
 
@@ -473,3 +589,214 @@
 .deliver-c {
     max-width: 1800px;
 }
+
+/* Base responsive styles */
+:root {
+    --mobile-heading-size: 2.5rem;
+    --mobile-padding: 1rem;
+  }
+  
+  /* Global responsive adjustments */
+  @media (max-width: 768px) {
+    h1, .industries-heading, .sectors, .contact, .blogs-heading,
+    .clients-heading, .case-heading, .testimonials-heading, .deliver-head {
+      font-size: var(--mobile-heading-size) !important;
+      line-height: 1.2;
+    }
+  
+    .industries-para, .deliver-para, .location-subheading {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  
+    .btn {
+      padding: 8px 16px !important;
+      font-size: 14px;
+    }
+  }
+  
+  /* Hero section responsive */
+  @media (max-width: 768px) {
+    .position-relative {
+      height: 50vh !important;
+    }
+    
+    h1[style*="font-size: 6rem"] {
+      font-size: 2.5rem !important;
+    }
+  }
+  
+  /* Services section responsive */
+  .services-section-full {
+    padding: var(--mobile-padding);
+  }
+  
+  @media (max-width: 768px) {
+    .service-section {
+      padding: 1rem;
+    }
+  
+    .service-pill {
+      font-size: 14px;
+      padding: 8px 16px;
+      margin: 4px;
+    }
+  
+    .services-container {
+      gap: 1rem;
+    }
+  }
+  
+  /* Industries section responsive */
+  @media (max-width: 768px) {
+    .industries-wrapper {
+      flex-direction: column;
+    }
+  
+    .heading-container {
+      padding: var(--mobile-padding);
+    }
+  
+    .grid-container {
+      padding: var(--mobile-padding) !important;
+    }
+  
+    .grid-row {
+      gap: 1.5rem;
+    }
+  }
+  
+  /* Client section responsive */
+  @media (max-width: 768px) {
+    .clients-section {
+      padding: var(--mobile-padding);
+    }
+  
+    .clients-grid {
+      grid-template-columns: 1fr;
+      padding: 0;
+      gap: 1.5rem;
+    }
+  
+    .client-card {
+      min-height: auto;
+      padding: 1.5rem;
+    }
+  }
+  
+  /* Testimonials responsive */
+  @media (max-width: 768px) {
+    .testimonials-container {
+      padding: var(--mobile-padding);
+    }
+  
+    .testimonials-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  
+    .testimonial-card {
+      min-height: auto;
+      padding: 1.5rem;
+    }
+  }
+  
+  /* Location section responsive */
+  @media (max-width: 768px) {
+    .location-section {
+      padding: var(--mobile-padding);
+    }
+  
+    .countries-grid {
+      grid-template-columns: repeat(2, 1fr);
+      padding-right: 0;
+      gap: 1rem;
+    }
+  
+    .work-image {
+      height: 200px;
+      margin-bottom: 1rem;
+    }
+  }
+  
+  /* Contact form responsive */
+  @media (max-width: 768px) {
+    .contact-section {
+      padding: var(--mobile-padding);
+    }
+  
+    .custom-input {
+      font-size: 1rem;
+    }
+  
+    .form-check-label {
+      font-size: 14px;
+    }
+  }
+  
+  /* Case studies responsive */
+  @media (max-width: 768px) {
+    .case-study-section {
+      padding: var(--mobile-padding);
+    }
+  
+    .case-studies-heading {
+      font-size: 18px;
+    }
+  }
+  
+  /* Blog section responsive */
+  @media (max-width: 768px) {
+    .blogs-heading {
+      margin-bottom: 1rem;
+    }
+  
+    .card-body {
+      padding: 1rem;
+    }
+  
+    .card-title {
+      font-size: 1.1rem;
+    }
+  }
+  
+  /* Stats section responsive */
+  @media (max-width: 768px) {
+    .stats-section h2 {
+      font-size: 1.5rem;
+    }
+    
+    .stats-section p {
+      font-size: 14px;
+    }
+  }
+  
+  /* Responsive images */
+  @media (max-width: 768px) {
+    .responsive-image {
+      height: 300px;
+    }
+    
+    .sector-image {
+      height: 200px;
+    }
+  }
+  
+  /* General spacing adjustments */
+  @media (max-width: 768px) {
+    .py-5 {
+      padding-top: 2rem !important;
+      padding-bottom: 2rem !important;
+    }
+    
+    .px-4, .px-5 {
+      padding-left: 1rem !important;
+      padding-right: 1rem !important;
+    }
+    
+    .gap-4 {
+      gap: 1rem !important;
+    }
+  }
+
+  
